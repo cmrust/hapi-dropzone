@@ -1,0 +1,8 @@
+# Dependency directory
+node_modules
+
+# Temporary logging directory
+logs
+
+# Uploads directory
+uploads
