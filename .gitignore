@@ -3,6 +3,3 @@ node_modules
 
 # Temporary logging directory
 logs
-
-# Uploads directory
-uploads

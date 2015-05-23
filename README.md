@@ -11,6 +11,10 @@ To set this project up:
 
 `git clone $repo`
 
+`cd hapi-dropzone`
+
 `npm install`
 
 `node app.js`
+
+Note: By default, files will be downloaded to the uploads directory included in this project. This can be overriden in the app.js file.

@@ -1,5 +1,11 @@
 var Hapi = require('hapi');
 var fs = require('fs');
+var Path = require('path');
+
+// downloadPath can be set to any location you have write access to
+// by default we will send files to the included uploads directory
+var downloadPath = Path.join(__dirname, 'uploads')
+//var example_downloadPath = '/home/user/Downloads/'
 
 var server = new Hapi.Server();
 server.connection({ host: "0.0.0.0", port: 8114 });
@@ -41,8 +47,7 @@ server.route({
                 var name = upload.hapi.filename;
                 console.log('Received request to upload', name);
 
-                var path = __dirname + "/uploads/" + name;
-                var file = fs.createWriteStream(path);
+                var file = fs.createWriteStream(Path.join(downloadPath, name));
 
                 file.on('error', function (err) {
                     console.error(err);
