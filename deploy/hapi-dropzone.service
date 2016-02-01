@@ -1,0 +1,16 @@
+[Unit]
+Description=hapi-dropzone
+After=network.target
+
+[Service]
+User=chris
+Group=chris
+Type=simple
+ExecStart=/usr/bin/node /home/chris/git/hapi-dropzone/app.js
+WorkingDirectory=/home/chris/git/hapi-dropzone/
+TimeoutStopSec=20
+KillMode=process
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

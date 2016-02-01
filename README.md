@@ -18,3 +18,11 @@ To set this project up:
 `node app.js`
 
 Note: By default, files will be downloaded to the uploads directory included in this project. This can be overriden in the app.js file.
+
+To set this application to start on boot:
+
+`sudo cp deploy/hapi-dropzone.service /etc/systemd/system/.`
+
+`sudo systemctl start hapi-dropzone.service`
+`sudo systemctl status hapi-dropzone.service`
+`sudo systemctl enable hapi-dropzone.service`
